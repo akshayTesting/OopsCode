@@ -1,31 +1,33 @@
-package abstract_class;
+package Hierachical;
 
-public class Calculator extends Data
+public class Calculator
 {
-
-	@Override
-	void add()
+double a;
+double b;
+void detail() {
+	System.out.println("Value of A is ::::"+a);
+	System.out.println("Value of B is ::::"+b);
+}
+}
+class demo extends Calculator
+{
+	void addtion(double a,double b )
 	{
-		System.out.println("Addtion Result is::::"+(a+b+c));
-		
+		System.out.println("addition Result is ::"+(a+b));
 	}
-
-	@Override
-	void mul() {
-		System.out.println("Multipilcaton Result is::::"+(a*b*c));
-		
+	
+}
+class Data  extends demo
+{
+	void sub(int a, int b)
+	{
+		System.out.println("Subtraction Result is ::"+(a-b));
 	}
-
-	@Override
-	void div() {
-		System.out.println("Division Result is::::"+(a+b+c));
-		
+}
+class Result extends Data
+{
+	void div(int a, int b)
+	{
+		System.out.println("Division Result is ::"+(a/b));
 	}
-
-	@Override
-	void sub() {
-		System.out.println("Substraction Result is::::"+(a-b-c));
-		
-	}
-
 }
