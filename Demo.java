@@ -1,23 +1,27 @@
-package Array2D;
+package EXCEPTIONS;
 
 public class Demo 
 {
 
-	public static void main(String[] args)
+	public static void main(String[] args) 
 	{
 	
-		int arr[][]= {{10,20,30},{40,50,60},{70,80,90}};
 		
-		
-		for (int i = 0; i < arr.length; i++) 
+		int a=100;
+		int b=2;
+		int c = 0;
+		System.out.println("value of A is "+" "+a );
+		System.out.println("value of B is "+" "+b );
+		try 
 		{
-		
-			for (int j = 0; j < arr[i].length; j++)
-			{
-			
-				System.out.print(arr[i][j] +" ");
-			}
-			System.out.println();
+			 c = a/b;
+		} 
+		catch (Exception e) 
+		{
+			System.out.println("Exception handled");
+			System.out.println(e.getMessage());
+				
 		}
-	}
+		System.out.println("Divided Result is "+" "+c);
+}
 }
