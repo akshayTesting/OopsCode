@@ -1,49 +1,25 @@
-package Inheritance.Multi_Level;
+package Thread_Object;
 
-public class Local
+public class Local implements Runnable 
 {
-String fruit="oragans";
-double price=100;
-String company="desi";
-void buy()
-{
-	System.out.println("fruit name is ::"+fruit);
-	System.out.println("price of fruit is ::"+price);
-	System.out.println("Name of company is ::"+company);
-}
-}
-class onlineshop extends Local
-{
-	String mobile="Redmi";
-	double price=2000;
-	double total=0;
-	void sell(int Quantity)
+	String name="samsung";
+	int price=5000;
+	
+	public void run()
 	{
-		System.out.println("Mobile name is ::"+mobile);
-		System.out.println("Mobile price is :::"+price);
-		total=price*Quantity;
-		System.out.println("total price is :::"+total);
-		
+		System.out.println("mobile name is "+" "+name);
+		System.out.println("mobile price is"+" "+price);
 	}
-	@Override
-	void buy()
+	public static void main(String[] args) throws InterruptedException 
 	{
-		System.out.println("fruit name is ::"+fruit);
-		System.out.println("price of fruit is ::"+price);
-		System.out.println("Name of company is ::"+company);
+	
+		Local l=new Local();
+		Thread t=new Thread(l);
+		t.start();
+		Thread.sleep(2000);
+		//t.start();  we can call start method only once
+		System.out.println(Thread.currentThread());
+		System.out.println(Thread.currentThread().getName());
 	}
-}
-class seller extends onlineshop
-{
-	String mobile="onePuls";
-	double price=40000;
-	double total=0;
-	void selle(int Quantity)
-	{
-		System.out.println("Mobile name is ::"+mobile);
-		System.out.println("Mobile price is :::"+price);
-		total=price*Quantity;
-		System.out.println("total price is :::"+total);
-		
-}
+
 }
