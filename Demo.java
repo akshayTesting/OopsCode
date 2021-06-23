@@ -1,27 +1,30 @@
-package EXCEPTIONS;
+package QUEUES;
 
-public class Demo 
-{
+import java.util.LinkedList;
+import java.util.Queue;
 
-	public static void main(String[] args) 
-	{
+public class Demo {
+
 	
+	public static void main(String[] args) {
 		
-		int a=100;
-		int b=2;
-		int c = 0;
-		System.out.println("value of A is "+" "+a );
-		System.out.println("value of B is "+" "+b );
-		try 
+		
+		Queue<Integer> q=new LinkedList<>();
+		for (int i = 0; i <11; i++)
 		{
-			 c = a/b;
-		} 
-		catch (Exception e) 
-		{
-			System.out.println("Exception handled");
-			System.out.println(e.getMessage());
-				
+		q.add(i);	
 		}
-		System.out.println("Divided Result is "+" "+c);
-}
+		System.out.println("Element in Queue are"+" "+q);
+		
+		
+		int Delete=q.remove();
+		System.out.println("Element Remove in Queue "+" "+Delete);
+		System.out.println(q);
+		int head=q.peek();
+		System.out.println("Head of Queue in"+" "+head);
+		System.out.println(q);
+		int totalSize=q.size();
+		System.out.println("Size of Queue is "+" "+totalSize);
+		System.out.println(q);
+	}
 }
