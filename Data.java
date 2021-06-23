@@ -1,23 +1,22 @@
-package abstract_class;
+package Implementation_class;
 
-public abstract class Data 
+public interface Data 
 {
 double a=10;
 double b=20;
-double c=30;
-
-void details()
+ void test();
+ 
+}
+class Data1 implements Data
 {
 
-	System.out.println("Value of A is ::::"+a);
-	System.out.println("Value of B is ::::"+b);
-	System.out.println("Value of C is ::::"+c);
-}
- 	 
-
-abstract void add();
-abstract void mul();
-abstract void div();
-abstract void sub();
+	@Override
+	public void test() 
+	{
+	System.out.println("A ki value ::"+a);
+	System.out.println("B ki Value::"+b);
+	System.out.println("Additional Result::"+(a+b));
+		
+	}
 	
 }
