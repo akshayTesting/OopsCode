@@ -1,23 +1,23 @@
-package ARRAY;
+package BLOCKS;
 
-import java.sql.Array;
-import java.util.Arrays;
+public class DEMO 
+{
 
-public class DEMO
-{
-public static void main(String[] args) 
-{
 	
-	//defining an array of integer type   
-	int [] array = new int [] {90, 23, 5, 109, 12, 22, 67, 34};  
-	//invoking sort() method of the Arrays class  
-	Arrays.sort(array);   
-	System.out.println("Elements of array sorted in ascending order: ");  
-	//prints array using the for loop  
-	for (int i = 0; i < array.length; i++)   
-	{       
-	System.out.println(array[i]);   
+	int speed;
+	{
+		System.out.println("This is Block");
+		speed=100;
+		System.out.println("speed of bike is "+" "+speed);
 	}
-	
-}
+	   
+	    public static void main(String args[])
+	    {
+	    DEMO b1=new DEMO();
+	    System.out.println("MMS");
+	//    DEMO b2=new DEMO();
+	    System.out.println("MME");
+	    }    
+
+
 }
